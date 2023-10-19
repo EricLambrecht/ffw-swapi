@@ -25,7 +25,7 @@ const PlanetPage: FunctionComponent<PlanetPageProps> = async ({ params }) => {
         <p>Climate: {data.climate}</p>
         <p>Water: {data.surface_water}</p>
         <p>Gravity: {data.gravity}</p>
-        <p>Population: {data.population}</p>
+        <p>Population: {new Intl.NumberFormat().format(data.population)}</p>
       </div>
 
       <div className={styles.listGrid}>
