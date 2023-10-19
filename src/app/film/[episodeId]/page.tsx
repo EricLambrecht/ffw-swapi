@@ -1,6 +1,6 @@
 import React, {FunctionComponent } from "react";
 import Link from "next/link";
-import { Character, Film, Planet, Species, Vehicle } from "@/src/swapi/types";
+import { Film, Planet, Species, Vehicle } from "@/src/swapi/types";
 
 import styles from "./page.module.css";
 import { UrlDataList } from "@/app/_components/UrlDataList";
