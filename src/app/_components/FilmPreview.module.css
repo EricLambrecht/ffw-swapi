@@ -1,9 +1,11 @@
 .card {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     box-sizing: border-box;
     background: var(--black);
     border: 1px solid var(--yellow);
     color: var(--white);
+    border-radius: 10px;
     text-transform: none;
     font-style: normal;
     text-decoration: none;
@@ -20,4 +22,9 @@
 .title {
     font-size: 24px;
     margin-top: 0;
+}
+
+.number {
+    margin-left: auto;
+    font-size: 100px;
 }

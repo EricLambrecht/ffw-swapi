@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { NamedList, NamedListProps } from "@/app/film/[episodeId]/_components/NamedList";
+import { NamedList, NamedListProps } from "@/app/_components/NamedList";
 import { getItemByUrl } from "@/src/swapi/getItemByUrl";
 import { ItemWithUrl } from "@/src/swapi/types";
 

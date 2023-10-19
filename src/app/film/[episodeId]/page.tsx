@@ -3,7 +3,7 @@ import Link from "next/link";
 import {Character, Film, Planet, Species, Vehicle} from "@/src/swapi/types";
 
 import styles from "./page.module.css";
-import {UrlDataList} from "@/app/film/[episodeId]/_components/UrlDataList";
+import {UrlDataList} from "@/app/_components/UrlDataList";
 
 const getFilm = async (episodeId: number): Promise<Film> => {
   const response = await fetch(`https://swapi.dev/api/films/${episodeId}`);
@@ -21,7 +21,7 @@ const FilmPage: FunctionComponent<FilmPageProps> = async ({ params }) => {
     <main className={styles.main}>
       <p className={styles.opening}>{data.opening_crawl}</p>
 
-      <h2 className={styles.title}>{data.title}</h2>
+      <h2 className={styles.title}>Ep.{data.episode_id} {data.title}</h2>
       <div className={styles.meta}>
         <p>Director: {data.director}</p>
         <p>Producer: {data.producer}</p>

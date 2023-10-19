@@ -8,8 +8,8 @@ export const FilmOverview = async () => {
 
   return (
     <ul className={styles.list}>
-      {data.results.map(film => (
-        <FilmPreview key={film.url} data={film} />
+      {data.results.map((film, i) => (
+        <FilmPreview key={film.url} data={film} id={i+1} />
       ))}
     </ul>
   )
