@@ -1,9 +1,9 @@
 .list {
-    padding-left: 20px;
+  padding-left: 20px;
 }
 
 .list a {
-    color: var(--white);
-    text-transform: none;
-    text-decoration: none;
+  color: var(--white);
+  text-transform: none;
+  text-decoration: none;
 }

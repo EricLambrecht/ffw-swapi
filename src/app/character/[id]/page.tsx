@@ -1,23 +1,25 @@
-import React, {FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
 import Link from "next/link";
-import {Character, Planet, Vehicle} from "@/src/swapi/types";
+import { Character, Planet, Vehicle } from "@/src/swapi/types";
 
 import styles from "./page.module.css";
 import { UrlDataList } from "@/app/_components/UrlDataList";
 import { getItemByUrl } from "@/src/swapi/getItemByUrl";
 import { FilmList } from "@/app/_components/FilmList";
-import {urlToId} from "@/src/swapi/urlToId";
+import { urlToId } from "@/src/swapi/urlToId";
 
 const getCharacter = async (id: number): Promise<Character> => {
   const response = await fetch(`https://swapi.dev/api/people/${id}`);
   return response.json();
-}
+};
 
 interface CharacterPageProps {
-  params: { id: number }
+  params: { id: number };
 }
 
-const CharacterPage: FunctionComponent<CharacterPageProps> = async ({ params }) => {
+const CharacterPage: FunctionComponent<CharacterPageProps> = async ({
+  params,
+}) => {
   const data = await getCharacter(params.id);
   const homeworld = await getItemByUrl<Planet>(data.homeworld);
 
@@ -28,7 +30,12 @@ const CharacterPage: FunctionComponent<CharacterPageProps> = async ({ params }) 
         <p>Height: {data.height}</p>
         <p>Weight: {data.mass}</p>
         <p>Birth Year: {data.birth_year}</p>
-        <p>Homeworld: <Link href={"/planet/" + urlToId(homeworld.url)}>{homeworld.name}</Link></p>
+        <p>
+          Homeworld:{" "}
+          <Link href={"/planet/" + urlToId(homeworld.url)}>
+            {homeworld.name}
+          </Link>
+        </p>
       </div>
 
       <div className={styles.listGrid}>
@@ -36,20 +43,23 @@ const CharacterPage: FunctionComponent<CharacterPageProps> = async ({ params }) 
           <FilmList urls={data.films} />
         </div>
         <div id="Gear">
-          <UrlDataList<Planet> title="Starships" urlList={data.starships} render={(ship => (
-            <>{ship.name}</>
-          ))} />
+          <UrlDataList<Planet>
+            title="Starships"
+            urlList={data.starships}
+            render={(ship) => <>{ship.name}</>}
+          />
 
-          <UrlDataList<Vehicle> title="Vehicles" urlList={data.vehicles} render={(vehicle => (
-            <>{vehicle.name}</>
-          ))} />
+          <UrlDataList<Vehicle>
+            title="Vehicles"
+            urlList={data.vehicles}
+            render={(vehicle) => <>{vehicle.name}</>}
+          />
         </div>
-
       </div>
 
       <Link href="/">Home</Link>
     </main>
-  )
-}
+  );
+};
 
-export default CharacterPage
+export default CharacterPage;

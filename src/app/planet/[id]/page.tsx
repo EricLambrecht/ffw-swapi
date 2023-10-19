@@ -9,10 +9,10 @@ import { CharacterList } from "@/app/_components/CharacterList";
 const getPlanet = async (id: number): Promise<Planet> => {
   const response = await fetch(`https://swapi.dev/api/planets/${id}`);
   return response.json();
-}
+};
 
 interface PlanetPageProps {
-  params: { id: number }
+  params: { id: number };
 }
 
 const PlanetPage: FunctionComponent<PlanetPageProps> = async ({ params }) => {
@@ -39,7 +39,7 @@ const PlanetPage: FunctionComponent<PlanetPageProps> = async ({ params }) => {
 
       <Link href="/">Home</Link>
     </main>
-  )
-}
+  );
+};
 
-export default PlanetPage
+export default PlanetPage;

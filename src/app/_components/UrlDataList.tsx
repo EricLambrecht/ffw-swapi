@@ -6,17 +6,17 @@ import { ItemWithUrl } from "@/src/swapi/types";
 type RenderFunction<T> = (item: T) => React.ReactNode;
 
 interface Props<T extends ItemWithUrl> extends NamedListProps {
-  urlList: string[]
-  render: RenderFunction<T>
+  urlList: string[];
+  render: RenderFunction<T>;
 }
 
 interface ItemProps<T extends ItemWithUrl> {
-  url: string
-  render: RenderFunction<T>
+  url: string;
+  render: RenderFunction<T>;
 }
 
-async function ListItem<T extends ItemWithUrl>({ url, render }: ItemProps<T>){
-  const item = await getItemByUrl<T>(url)
+async function ListItem<T extends ItemWithUrl>({ url, render }: ItemProps<T>) {
+  const item = await getItemByUrl<T>(url);
   return <li>{render(item)}</li>;
 }
 
@@ -32,14 +32,22 @@ async function ListItem<T extends ItemWithUrl>({ url, render }: ItemProps<T>){
  * @param title Title of the list
  * @constructor
  */
-export function UrlDataList<T extends ItemWithUrl>({ urlList, render, title }: Props<T>) {
+export function UrlDataList<T extends ItemWithUrl>({
+  urlList,
+  render,
+  title,
+}: Props<T>) {
   return (
     <NamedList title={title}>
-      {urlList.length > 0 ? urlList.map(url => (
-        <Suspense key={url} fallback={<li>…</li>}>
-          <ListItem url={url} render={render} />
-        </Suspense>
-      )) : <p>[None]</p>}
+      {urlList.length > 0 ? (
+        urlList.map((url) => (
+          <Suspense key={url} fallback={<li>…</li>}>
+            <ListItem url={url} render={render} />
+          </Suspense>
+        ))
+      ) : (
+        <p>[None]</p>
+      )}
     </NamedList>
-  )
+  );
 }

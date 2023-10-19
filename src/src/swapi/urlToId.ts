@@ -1,7 +1,7 @@
 export const urlToId = (url: string) => {
-  const match = url.match(/\d+/)
+  const match = url.match(/\d+/);
   if (match) {
-    return match[0]
+    return match[0];
   }
-  return null
-}
+  return null;
+};
