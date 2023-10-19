@@ -1,9 +1,11 @@
 import React, {FunctionComponent } from "react";
 import Link from "next/link";
-import {Character, Film, Planet, Species, Vehicle} from "@/src/swapi/types";
+import { Character, Film, Planet, Species, Vehicle } from "@/src/swapi/types";
 
 import styles from "./page.module.css";
-import {UrlDataList} from "@/app/_components/UrlDataList";
+import { UrlDataList } from "@/app/_components/UrlDataList";
+import { CharacterList } from "@/app/_components/CharacterList";
+import {PlanetList} from "@/app/_components/PlanetList";
 
 const getFilm = async (episodeId: number): Promise<Film> => {
   const response = await fetch(`https://swapi.dev/api/films/${episodeId}`);
@@ -30,16 +32,10 @@ const FilmPage: FunctionComponent<FilmPageProps> = async ({ params }) => {
 
       <div className={styles.listGrid}>
         <div id="Characters">
-          {/**  To make it more readable (but less modular), these UrlDataLists
-                could be capsuled into a CharacterList, PlanetList component etc.            **/}
-          <UrlDataList<Character> title="Characters" urlList={data.characters} render={(character => (
-            <>{character.name} ({character.birth_year}) - {character.gender}</>
-          ))} />
+          <CharacterList urls={data.characters} />
         </div>
         <div id="PlanetsAndSpecies">
-          <UrlDataList<Planet> title="Planets" urlList={data.planets} render={(planet => (
-            <>{planet.name} ({planet.climate}, water: {planet.surface_water ? "Yes" : "No"})</>
-          ))} />
+          <PlanetList urls={data.planets} />
 
           <UrlDataList<Species> title="Species" urlList={data.species} render={(species => (
             <>{species.name}</>

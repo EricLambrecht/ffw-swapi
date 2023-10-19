@@ -22,14 +22,6 @@
     margin-right: 15px;
 }
 
-.opening {
-    transform-style: preserve-3d;
-    transform: rotateX(15deg) scale(0.9);
-    color: yellow;
-    max-width: 630px;
-    text-align: justify;
-}
-
 .listGrid {
     display: grid;
     width: 100%;

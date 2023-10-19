@@ -1,6 +1,9 @@
-.title {
-}
-
 .list {
     padding-left: 20px;
+}
+
+.list a {
+    color: var(--white);
+    text-transform: none;
+    text-decoration: none;
 }

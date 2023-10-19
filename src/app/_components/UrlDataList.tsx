@@ -35,11 +35,11 @@ async function ListItem<T extends ItemWithUrl>({ url, render }: ItemProps<T>){
 export function UrlDataList<T extends ItemWithUrl>({ urlList, render, title }: Props<T>) {
   return (
     <NamedList title={title}>
-      {urlList.map(url => (
+      {urlList.length > 0 ? urlList.map(url => (
         <Suspense key={url} fallback={<li>…</li>}>
           <ListItem url={url} render={render} />
         </Suspense>
-      ))}
+      )) : <p>[None]</p>}
     </NamedList>
   )
 }
