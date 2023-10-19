@@ -1,9 +1,9 @@
-import React, {FunctionComponent} from "react";
-import {Character} from "@/src/swapi/types";
+import React, { FunctionComponent } from "react";
+import { Character } from "@/src/swapi/types";
 import Link from "next/link";
-import {urlToId} from "@/src/swapi/urlToId";
-import {UrlDataList} from "@/app/_components/UrlDataList";
-import {getGenderEmoji} from "@/src/swapi/getGenderEmoji";
+import { urlToId } from "@/src/swapi/urlToId";
+import { UrlDataList } from "@/app/_components/UrlDataList";
+import { getGenderEmoji } from "@/src/swapi/getGenderEmoji";
 
 interface Props {
   urls: string[];

@@ -7,7 +7,7 @@ import { UrlDataList } from "@/app/_components/UrlDataList";
 import { getItemByUrl } from "@/src/swapi/getItemByUrl";
 import { FilmList } from "@/app/_components/FilmList";
 import { urlToId } from "@/src/swapi/urlToId";
-import {getGenderEmoji} from "@/src/swapi/getGenderEmoji";
+import { getGenderEmoji } from "@/src/swapi/getGenderEmoji";
 
 const getCharacter = async (id: number): Promise<Character> => {
   const response = await fetch(`https://swapi.dev/api/people/${id}`);
@@ -26,7 +26,9 @@ const CharacterPage: FunctionComponent<CharacterPageProps> = async ({
 
   return (
     <main className={styles.main}>
-      <h2 className={styles.title}>{data.name} {getGenderEmoji(data.gender)}</h2>
+      <h2 className={styles.title}>
+        {data.name} {getGenderEmoji(data.gender)}
+      </h2>
       <div className={styles.meta}>
         <p>Height: {data.height}</p>
         <p>Weight: {data.mass}</p>

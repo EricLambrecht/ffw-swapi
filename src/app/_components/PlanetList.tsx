@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Planet } from "@/src/swapi/types";
 import { UrlDataList } from "@/app/_components/UrlDataList";
 import { urlToId } from "@/src/swapi/urlToId";
-import {getClimateEmoji} from "@/src/swapi/getClimateEmoji";
+import { getClimateEmoji } from "@/src/swapi/getClimateEmoji";
 
 interface Props {
   urls: string[];

@@ -1,4 +1,4 @@
-const emojiMap: {[key: string]: string} = {
+const emojiMap: { [key: string]: string } = {
   frozen: "❄️",
   frigid: "❄️",
   murky: "🪐",
@@ -8,8 +8,8 @@ const emojiMap: {[key: string]: string} = {
   "temperate, tropical": "🌎",
   "hot, humid": "🏝",
   temperate: "🏕️",
-  "temperate, moist": "🏕"
-}
+  "temperate, moist": "🏕",
+};
 
 export const getClimateEmoji = (climate: string) => {
   const emoji = emojiMap[climate];
@@ -19,4 +19,4 @@ export const getClimateEmoji = (climate: string) => {
   }
 
   return emoji;
-}
+};
