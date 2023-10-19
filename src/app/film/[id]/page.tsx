@@ -7,17 +7,17 @@ import { UrlDataList } from "@/app/_components/UrlDataList";
 import { CharacterList } from "@/app/_components/CharacterList";
 import { PlanetList } from "@/app/_components/PlanetList";
 
-const getFilm = async (episodeId: number): Promise<Film> => {
-  const response = await fetch(`https://swapi.dev/api/films/${episodeId}`);
+const getFilm = async (id: number): Promise<Film> => {
+  const response = await fetch(`https://swapi.dev/api/films/${id}`);
   return response.json();
 };
 
 interface FilmPageProps {
-  params: { episodeId: number };
+  params: { id: number };
 }
 
 const FilmPage: FunctionComponent<FilmPageProps> = async ({ params }) => {
-  const data = await getFilm(params.episodeId);
+  const data = await getFilm(params.id);
 
   return (
     <main className={styles.main}>
