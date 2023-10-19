@@ -1,0 +1,44 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 200px;
+    perspective-origin: center top;
+}
+
+.title {
+    font-size: 36px;
+}
+
+.meta {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+}
+
+.meta > *:not(:first-child) {
+    margin-left: 15px;
+}
+
+.meta > *:not(:first-child):before {
+    content: "|";
+    color: var(--yellow);
+    margin-right: 15px;
+}
+
+.opening {
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) scale(0.9);
+    color: yellow;
+    max-width: 630px;
+    text-align: justify;
+}
+
+.listGrid {
+    display: grid;
+    width: 100%;
+    margin-top: 15px;
+    max-width: 1024px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
