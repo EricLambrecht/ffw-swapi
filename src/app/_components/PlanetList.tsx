@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Planet } from "@/src/swapi/types";
 import { UrlDataList } from "@/app/_components/UrlDataList";
 import { urlToId } from "@/src/swapi/urlToId";
+import {getClimateEmoji} from "@/src/swapi/getClimateEmoji";
 
 interface Props {
   urls: string[];
@@ -14,8 +15,7 @@ export const PlanetList: FunctionComponent<Props> = ({ urls }) => (
     urlList={urls}
     render={(planet) => (
       <Link href={"/planet/" + urlToId(planet.url)}>
-        {planet.name} ({planet.climate}, water:{" "}
-        {planet.surface_water ? "Yes" : "No"})
+        {planet.name} {getClimateEmoji(planet.climate)}
       </Link>
     )}
   />
