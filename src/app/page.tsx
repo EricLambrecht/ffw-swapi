@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import { FilmOverview } from "@/app/FilmOverview";
+import { FilmOverview } from "@/app/_components/FilmOverview";
 import React, {FunctionComponent } from "react";
 
 const Home: FunctionComponent = () => {

@@ -5,10 +5,13 @@ export type BatchResponse<T> = {
     results: T[];
 }
 
-type ItemMeta = {
+export type ItemWithUrl = {
+    url: string
+}
+
+type ItemMeta = ItemWithUrl & {
     created: string;
     edited: string;
-    url: string;
 }
 
 export type Film = ItemMeta & {
