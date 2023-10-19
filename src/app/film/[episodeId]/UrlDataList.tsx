@@ -1,6 +1,6 @@
 import React, {FunctionComponent, Suspense} from "react";
 import {NamedList, NamedListProps} from "@/app/film/[episodeId]/NamedList";
-import { Character } from "@/services/types";
+import { Character } from "@/src/swapiTypes";
 
 type ItemWithUrl = {
   url: string

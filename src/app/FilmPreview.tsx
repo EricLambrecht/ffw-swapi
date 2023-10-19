@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import Link from 'next/link'
-import { Film } from "@/services/types";
+import { Film } from "@/src/swapiTypes";
 
 import styles from "./FilmPreview.module.css";
 

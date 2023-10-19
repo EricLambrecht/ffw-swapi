@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from "react";
 import { NamedList } from "@/app/film/[episodeId]/NamedList";
-import { Character } from "@/services/types";
+import { Character } from "@/src/swapiTypes";
 
 interface Props {
   urlList: string[]

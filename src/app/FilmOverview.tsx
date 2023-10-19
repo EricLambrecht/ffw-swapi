@@ -1,4 +1,4 @@
-import { BatchResponse, Film } from "@/services/types";
+import { BatchResponse, Film } from "@/src/swapiTypes";
 import { FilmPreview } from "@/app/FilmPreview";
 
 import styles from "./FilmOverview.module.css"
