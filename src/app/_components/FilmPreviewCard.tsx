@@ -4,7 +4,7 @@ import { Film } from "@/src/swapi/types";
 
 import styles from "./FilmPreview.module.css";
 
-export const FilmPreview: FunctionComponent<{ data: Film, id: number }> = ({ data, id }) => {
+export const FilmPreviewCard: FunctionComponent<{ data: Film, id: number }> = ({ data, id }) => {
   const { title, episode_id, director, release_date } = data;
 
   return <li >
