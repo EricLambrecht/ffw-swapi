@@ -16,6 +16,30 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+### Running Tests
+
+To run Cypress E2E tests:
+
+```bash
+npm run cypress:open
+```
+
+To run linter:
+
+```bash
+npm run lint
+```
+
+The project also uses pretter for formatting:
+
+```bash
+# To check
+npx prettier . --check
+
+# To fix/write
+npx prettier . --write
+```
+
 ## Some notes
 
 ### Tech Stack
