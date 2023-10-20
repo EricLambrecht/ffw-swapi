@@ -58,7 +58,7 @@ In a real-world environment I would definitely test all components with unit tes
 
 I would like to have expanded upon the app's features – because of the time limit (4h-8h) I had to make some cuts, though.
 I would have liked to improve the caching even further (e.g. initially all movies are loaded, and upon clicking a single one, it is loaded again, because the url is different).
-Of couse I would've added more views and data as well (for species, ships etc), but I thought it was not worth the time. 
+Of couse I would've added more views and data as well (for species, ships etc), but I thought it was not worth the time.
 A better UX would also be desirable (maybe navigating from movie to movie via arrows or a slider), transitions from one view to another – images and animations would also be nice.
 
 ### Workflow
@@ -68,8 +68,8 @@ Unfortunately, I also spent quite some time on a nasty bug (see next section) wh
 
 ### `ConnectionClosed` error
 
-In Chrome you may encounter an error which states `ConnectionClosed` that seems to occur randomly after the data has been fetched from the API. I found some info on it online. 
-It seems to be related to the [data fetching and streaming feature of Next.js](https://github.com/EricLambrecht/react-timing-hooks/blob/main/integration-tests/useTimeout.test.tsx) (with React's `<Suspense>` component). I came to this conclusion, because when I removed the `<Suspense>` components, it was gone, but since the bug is encountered quite rarely I wanted to keep it in for a better UX. 
+In Chrome you may encounter an error which states `ConnectionClosed` that seems to occur randomly after the data has been fetched from the API. I found some info on it online.
+It seems to be related to the [data fetching and streaming feature of Next.js](https://github.com/EricLambrecht/react-timing-hooks/blob/main/integration-tests/useTimeout.test.tsx) (with React's `<Suspense>` component). I came to this conclusion, because when I removed the `<Suspense>` components, it was gone, but since the bug is encountered quite rarely I wanted to keep it in for a better UX.
 Some user's stated it can be fixed with a different Next.js version, but I didn't want to invest so much time in it. I'm sorry if you encounter this error. Reloading fixes it.
 
 ## Deployment on Vercel
