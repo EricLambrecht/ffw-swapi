@@ -47,12 +47,12 @@ npx prettier . --write
 Although Next.js would not be my go-to framework for such a small project, I decided to use it because of FFW's tech stack and also to try Next JS 13 (which I didn't use before) and the app router.
 Typescript is my go-to language when it comes to Javascript, and React was a no-brainer as well.
 
-I decided against Redux, although I would use it quite often, because I found Next.js's caching to be sufficient. With the SWAPI data it is basically the same result/ux with less code.
+I decided against Redux, although I would use it quite often, because I found Next.js's caching (and streaming) to be sufficient. With the SWAPI data it is basically the same result/ux with less code.
 And since I wanted to save time, I opted out of Redux. Because of Next's builtin fetch functionality, I didn't use Axios (which was suggested in your email).
 
 ### Testing
 
-In a real-world environment I would definitely test all components with unit tests and integration tests. An example of how I write tests can be found [here](https://github.com/EricLambrecht/react-timing-hooks/blob/main/integration-tests/useTimeout.test.tsx). Because I wanted to keep the time limit I only added one quick and dirty Cypress E2E test.
+In a real-world environment I would definitely test all components with unit tests and integration tests. An example of how I write tests can be found [in this project](https://github.com/EricLambrecht/react-timing-hooks/blob/main/integration-tests/useTimeout.test.tsx). Because I wanted to keep the time limit I only added one quick and dirty Cypress E2E test.
 
 ### If I had more time...
 
