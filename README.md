@@ -16,10 +16,6 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
 ## Some notes
 
 ### Tech Stack
@@ -36,7 +32,7 @@ In a real-world environment I would definitely test all components with unit tes
 
 ### If I had more time...
 
-I would like to have expanded upon the app's features – because of the time limit I had to make some cuts, though.
+I would like to have expanded upon the app's features – because of the time limit (4h-8h) I had to make some cuts, though.
 I would have liked to improve the caching even further (e.g. initially all movies are loaded, and upon clicking a single one, it is loaded again, because the url is different).
 Of couse I would've added more views and data as well (for species, ships etc), but I thought it was not worth the time. 
 A better UX would also be desirable (maybe navigating from movie to movie via arrows or a slider), transitions from one view to another – images and animations would also be nice.
